@@ -1,6 +1,3 @@
-interface ServiceInit {
-    state: 'init';
-}
 interface ServiceLoading {
     state: 'loading';
 }
@@ -13,7 +10,6 @@ interface ServiceError {
   error: Error;
 }
 export type Service<T> =
- | ServiceInit
  | ServiceLoading
  | ServiceLoaded<T>
  | ServiceError;

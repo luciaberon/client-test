@@ -1,14 +1,14 @@
 export interface Data {
     news: Article[],
-    weather: Weather[]
+    weather: Weather
 }
 
 interface Article {
     title: string,
     description: string,
-    url: string,
+    urlToImage: string,
     img: string,
-    date: string
+    publishedAt: string
 }
 
 interface Weather {

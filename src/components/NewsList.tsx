@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Carousel } from 'react-bootstrap';
+
 
 
 const NewsList:React.FC<{}> = () => { 
