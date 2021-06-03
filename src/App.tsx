@@ -1,10 +1,12 @@
 import React from 'react';
+import NewsList from './compontents/NewsList'
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <NewsList />
 
-    </div>
+    </>
   );
 }
 
