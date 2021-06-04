@@ -1,8 +1,11 @@
 export interface Data {
-    news: Article[],
-    weather: Weather
+    newsList: Articles,
+    weatherForecast: Weather
 }
 
+export interface Articles {
+    articles: Article[]
+}
 interface Article {
     title: string,
     description: string,
@@ -11,7 +14,7 @@ interface Article {
     publishedAt: string
 }
 
-interface Weather {
+export interface Weather {
     icon: string,
     description: string,
     temperature: number,

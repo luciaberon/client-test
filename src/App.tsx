@@ -1,15 +1,19 @@
 import React from 'react';
-import NewsList from './components/NewsList';
-import Weather from './components/Weather';
+import Header from './components/Header';
+import './app.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <>
-      <NewsList />
-      <Weather />
+const App: React.FC<{}> = () => {
 
-    </>
-  );
+    return (
+      <Router>
+        <Switch>
+          <Route path={`/:city`}>
+            <Header />            
+          </Route>
+        </Switch>
+      </Router>
+    );
 }
 
 export default App;
