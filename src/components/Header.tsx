@@ -16,10 +16,10 @@ const Header: React.FC<{}> = () => {
         <>
             <Search />
             { service ?
-            <div>
-                <CurrentWeather {...service.weatherForecast}/> 
-                <Headlines {...service.newsList}/>             
-            </div> 
+            <>
+                <Headlines {...service.newsList}/> 
+                <CurrentWeather {...service.weatherForecast}/>             
+            </> 
             :   
             <Spinner />
             }

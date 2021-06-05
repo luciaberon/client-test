@@ -1,6 +1,8 @@
 .newSlider {
     width:50%;
+    margin: auto;
 }
+
 
 .newSlider img {
     filter: brightness(55%)
@@ -31,6 +33,9 @@
     .description {
         display: none;
     }
+    .card {
+        width: 90%;
+    }
 }
 
 .center {
@@ -38,4 +43,12 @@
   justify-content: center;
   align-items: center;
   margin-top:30px;
+}
+
+.card {
+    border: 1px solid black;
+    text-align: center;
+    margin:auto;
+    width: 50%;
+    background-color: gray;
 }
