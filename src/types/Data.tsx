@@ -1,6 +1,6 @@
 export interface Data {
     newsList: Articles,
-    weatherForecast: Weather
+    weatherForecast: WeatherForecast
 }
 
 export interface Articles {
@@ -14,11 +14,19 @@ interface Article {
     publishedAt: string
 }
 
-export interface Weather {
-    icon: string,
+export interface WeatherForecast {
+    weather: Weather[],
+    main: Main
+}
+
+interface Weather {
+    main: string,
     description: string,
-    temperature: number,
-    humidity: number,
-    maxTemperature: number,
-    minTemperature: number
+    icon: string
+}
+
+interface Main {
+    temp: number,
+    temp_min: number,
+    temp_max: number
 }

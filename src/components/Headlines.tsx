@@ -10,8 +10,6 @@ const Headlines:React.FC<Articles> = (props) => {
     };
     
     return (
-        <>
-        <h1>lol</h1>
         <Carousel className="newSlider" activeIndex={index} onSelect={handleSelect}>
             { props.articles.slice(0,10).map((item,index) => {
                 return (
@@ -28,9 +26,6 @@ const Headlines:React.FC<Articles> = (props) => {
                 )
             })}
         </Carousel>
-        
-        </>
-        
     )
 }
 export default Headlines;
