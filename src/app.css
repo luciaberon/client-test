@@ -2,6 +2,9 @@
 body {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    background-color: #8ec5fc71;
+    background-image: linear-gradient(62deg, hsla(210, 79%, 85%, 0.365) 0%, #E0C3FC 100%);
 }
 
 .center {
@@ -9,6 +12,10 @@ body {
   justify-content: center;
   align-items: center;
   margin-top:30px;
+}
+
+header {
+    transition: 0.3s;
 }
 
 .card {

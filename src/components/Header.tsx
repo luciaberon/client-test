@@ -11,19 +11,19 @@ import Spinner from './Spinner'
 const Header: React.FC<{}> = () => {
 
     const { city } = useParams<{ city: string }>();
-    const service = useFetch(city);
+    const { result, loading, error } = useFetch(city);
+
     return (
         <>
-            <Search />
-            { service ?
-            <>
-                <Headlines {...service.newsList}/> 
-                <CurrentWeather {...service.weatherForecast}/>             
-            </> 
-            :   
-            <Spinner />
+            { loading && <Spinner />}
+            { result &&
+                <div className="header">
+                    <Search />
+                    <Headlines {...result.newsList}/> 
+                    <CurrentWeather {...result.weatherForecast}/>             
+                </div> 
             }
-           
+            { error && <h3>{error}</h3>}           
         </>
     )
 }

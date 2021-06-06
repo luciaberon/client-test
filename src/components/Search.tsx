@@ -13,7 +13,7 @@ const Search : React.FC = () => {
             city: input,
             searchedAt: data
         };
-        data.append( "json", JSON.stringify( payload ) );
+        data.append( "json", JSON.stringify(payload));
         history.push(`/${input}`)
         fetch(`https://localhost:44391/api/history`,
         {
@@ -22,6 +22,7 @@ const Search : React.FC = () => {
             'Content-Type': 'application/json'
             },
             method: "POST",
+            mode: 'cors',
             body: data
         })
 
@@ -32,6 +33,7 @@ const Search : React.FC = () => {
         value={input}
         onChange={(value) => setInput(value)}
         onRequestSearch={() => searchCity()}
+        className="searchbar"
         />
     )
 }
