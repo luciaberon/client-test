@@ -7,15 +7,8 @@ const Search : React.FC = () => {
     const history = useHistory();
     const [input, setInput] = useState('');
     const searchCity =async () => {        
-        var data = new FormData();
-        const date = Date.now();
-        var payload = {
-            city: input,
-            searchedAt: data
-        };
-        data.append( "json", JSON.stringify(payload));
-        history.push(`/${input}`)
-        fetch(`https://localhost:44391/api/history`,
+
+        const response = await fetch(`https://localhost:44391/api/history`,
         {
             headers: {
             'Accept': 'application/json',
@@ -23,9 +16,9 @@ const Search : React.FC = () => {
             },
             method: "POST",
             mode: 'cors',
-            body: data
+            body: JSON.stringify({city: input})
         })
-
+        history.push(`/${input}`);
         history.go(0);
     }
     return (
