@@ -30,3 +30,8 @@ interface Main {
     temp_min: number,
     temp_max: number
 }
+
+export interface History {
+    id: number,
+    city: string
+}
