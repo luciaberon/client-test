@@ -7,13 +7,19 @@ body {
     background-image: linear-gradient(62deg, hsla(210, 79%, 85%, 0.365) 0%, #E0C3FC 100%);
 }
 
-#root > div > button {
-    margin:20px auto;
-    display: block;
-}
 #root > div > div:nth-child(3), #root > div > div.card {
     padding: 0;
     margin-bottom: 20px;
+}
+
+button.btn.btn-dark {
+    margin: 20px auto;
+    display: block;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
 }
 
 .center {
@@ -38,7 +44,11 @@ header {
 
 .card div {
     padding: 20px;
-    background-color: rgba(128, 128, 128, 0.445);
+    background-color: rgba(128, 128, 128, 0.493);
+}
+
+.link-city {
+    cursor: pointer;
 }
 
 .carousel-item,
@@ -49,7 +59,7 @@ header {
 }
 
 .carousel-inner img {
-    filter: brightness(50%);
+    filter: brightness(45%);
 }
 
 .carousel-item {
@@ -75,7 +85,7 @@ header {
 @media (max-width: 768px) {
     .newSlider {
         width: 100%;
-        height: 40vh
+        height: 50vh
     }
 
     .title {

@@ -26,6 +26,7 @@ const Search : React.FC = () => {
         value={input}
         onChange={(value) => setInput(value)}
         onRequestSearch={() => searchCity()}
+        placeholder="Enter city name"
         className="searchbar"
         />
     )
